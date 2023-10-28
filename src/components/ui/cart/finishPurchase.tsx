@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 const FinishPurchase = () => {
   const { products } = useContext(CartContext);
-  
+
   const handleFinishPurchaseClick = async () => {
     const checkout = await createCheckout(products);
 
@@ -17,12 +17,14 @@ const FinishPurchase = () => {
   };
   return (
     <>
-      <Button
-        className="font-bold uppercase mt-7"
-        onClick={handleFinishPurchaseClick}
-      >
-        Finalizar compra
-      </Button>
+      {products.length > 0 && (
+        <Button
+          className="font-bold uppercase mt-7"
+          onClick={handleFinishPurchaseClick}
+        >
+          Finalizar compra
+        </Button>
+      )}
     </>
   );
 };
