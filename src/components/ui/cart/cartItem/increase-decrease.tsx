@@ -8,7 +8,7 @@ interface CartItemProps {
 }
 
 const IncreaseAndDecrease = ({ product }: CartItemProps) => {
-  const { decreaseProductQuantity, increaseProductQuantity } =
+  const { decreaseProductQuantity, increaseProductQuantity, addProductToCart } =
     useContext(CartContext);
 
   const handleDecreaseProductQuantityClick = () => {
@@ -27,7 +27,7 @@ const IncreaseAndDecrease = ({ product }: CartItemProps) => {
         className="h-8 w-8"
         onClick={handleDecreaseProductQuantityClick}
       >
-        <ArrowLeftIcon size={12} />
+        <ArrowLeftIcon size={14} />
       </Button>
 
       <span className="text-xs gap-1">{product.quantity}</span>
@@ -38,7 +38,7 @@ const IncreaseAndDecrease = ({ product }: CartItemProps) => {
         className="h-8 w-8"
         onClick={handleIncreaseProductQuantityClick}
       >
-        <ArrowRightIcon size={12} />
+        <ArrowRightIcon size={14} />
       </Button>
     </div>
   );

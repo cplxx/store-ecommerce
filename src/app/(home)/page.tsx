@@ -48,15 +48,43 @@ export default async function Home() {
         src="/banner-home-02.png"
         alt="Até 55% de desconto em mouses"
       />
+
+      <div className="items-center justify-around hidden md:flex lg:px-10">
+        <Image
+          src="/fone-desktop.png"
+          alt=""
+          width={0}
+          height={0}
+          className="w-[45%]"
+          sizes="100vw"
+        />
+
+        <Image
+          src="/mouse-desktop.png"
+          alt=""
+          width={0}
+          height={0}
+          className="w-[45%]"
+          sizes="100vw"
+        />
+      </div>
+
       <div>
         <SectionTitle>Teclados</SectionTitle>
         <ProductList products={keyboards} />
       </div>
 
-      <PromoBanner
-        src="/banner-home-03.png"
-        alt="Até 55% de desconto em headset"
+      <PromoBanner src="/banner-home-03.png" alt="Até 55% de descontos" />
+
+      <Image
+        src="/frete.png"
+        alt=""
+        width={0}
+        height={0}
+        className="xl:w-[98%] w-[95%] md:ml-5 rounded-lg  hidden md:block lg:px-14"
+        sizes="100vw"
       />
+
       <div>
         <SectionTitle>Mouses</SectionTitle>
         <ProductList products={mouses} />
