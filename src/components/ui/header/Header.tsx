@@ -6,7 +6,6 @@ import { Card } from "../card";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../sheet";
 import { Separator } from "../separator";
 import Image from "next/image";
-import { Input } from "../input";
 import CartModal from "./cart";
 import { UserInformation } from "./UserInformation";
 import { AuthButtons } from "./AuthButtons";
@@ -26,22 +25,11 @@ const Header = () => {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="bg-primary">
-            <SheetHeader>
-              <Image src="/pichau.png" width={100} height={40} alt="logo" />
-            </SheetHeader>
             <UserInformation />
             <Separator className=" bg-white mt-4" />
             <AuthButtons />
           </SheetContent>
         </Sheet>
-        <Image
-          src="/pichau.png"
-          width={200}
-          height={20}
-          alt="logo"
-          className="hidden lg:block"
-        />
-        <Input type="search" placeholder="Busque aqui" className="max-w-xl" />
         <UserInformation />
 
         <Sheet>
