@@ -39,7 +39,7 @@ const Header = () => {
           <ul className="flex gap-10">
             <li>Inicio</li>
             <li>Catálago</li>
-            <li>Ofertas</li>
+            <li>Ofertass</li>
           </ul>
         </div>
 
