@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Rubik } from "next/font/google";
 import "./globals.css";
 import { getServerSession } from "next-auth";
 import { AuthProvider } from "@/providers/Session";
@@ -7,7 +7,7 @@ import Footer from "@/components/ui/footer";
 import CartProvider from "@/providers/cart";
 import Header from "@/components/ui/header/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,7 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={rubik.className}>
         <div className="flex flex-col h-full">
           <AuthProvider>
             <CartProvider>
